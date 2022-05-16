@@ -1,0 +1,55 @@
+syntax = "proto3";
+
+package companypb;
+
+option go_package= "companypb/";
+
+message Driver{
+    string name= 1;
+}
+
+message DriverRequest{
+    Driver request = 1;
+}
+
+message DriverResponse{
+    int32 id = 1;
+    Driver response= 2;
+}
+
+//Truck service
+
+message Truck{
+    int32 modelNo = 1;
+    string power= 2;
+}
+
+message TruckRequest{
+     Truck request = 1;
+}
+
+message TruckResponse{ 
+    int32 id = 1;
+    Truck response = 2;
+}
+
+//User service
+
+message User{
+    string name = 1;
+}
+
+message UserRequest{
+    User request = 1;
+}
+
+message UserResponse{
+    int32 id = 1;
+    User response = 2;
+}
+
+service DriverService{
+    rpc InsertDriver(DriverRequest) returns (DriverResponse){};
+    rpc InsertTruck(TruckRequest) returns (TruckResponse){};
+    rpc InsertUser(UserRequest) returns (UserResponse){};
+}
