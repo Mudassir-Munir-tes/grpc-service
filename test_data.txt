@@ -1,0 +1,66 @@
+Insert and retrieve Truck,Driver and User fields in respective table
+
+1st table (TRUCK)
+
+http://localhost:8080/truck    //endpoint
+
+//input
+
+{
+    "modelno": 2345,
+    "power": "low"
+}
+//output
+
+{
+    "truck": {
+        "id": 2,
+        "response": {
+            "modelNo": 2345,
+            "power": "low"
+        }
+    }
+}
+
+2nd table (USER)
+
+http://localhost:8080/user    //endpoint
+
+//input
+
+{
+   "name": "user1"
+
+}
+
+//output
+
+{
+    "id": 8,
+    "response": {
+        "name": "user1"
+    }
+}
+
+3rd table  (DRIVER)
+
+http://localhost:8080/driver    //endpoint
+
+//input
+
+{
+   "name": "driver1"
+
+}
+
+//output
+
+{
+    "driver": {
+        "id": 2,
+        "response": {
+            "name": "driver1"
+        }
+    }
+}
+
